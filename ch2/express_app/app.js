@@ -10,6 +10,14 @@ var usersRouter = require("./routes/users");
 
 var app = express();
 
+const ses_opt = {
+  secret: "test key",
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 60 * 60 * 24 },
+};
+app.use(session(ses_opt));
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
