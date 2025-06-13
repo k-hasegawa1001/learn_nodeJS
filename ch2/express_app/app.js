@@ -54,6 +54,7 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-console.log("http://localhost:3000/hello");
+console.log("http://localhost:3000/hello\n");
+console.log("http://localhost:3000/db\n");
 
 module.exports = app;
